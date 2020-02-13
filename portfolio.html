@@ -73,10 +73,43 @@
         <!-- navbar -->
 
 
-        <div class="homeScreen">
-            <span class="headerTxt d-none">
-                Hello, I'm <span class="name">Vibin</span>, Front-end Developer based in Chennai
+        <div class="row homeScreen">
+            <span class="col-10 col-lg-4 headerTxt d-none">
+                <div class="headerOutLine">
+                    <img src="svg/homepageIMG/introIMG.svg" alt="headerImg" class="headerImg">
+                    <span class="homeFont">
+                        I'm Vibin, Front-end Developer based in Chennai
+                    </span>
+                </div>
             </span>
+            <div class="col-0 col-lg-3 btnGroup d-none">
+                <ul>
+                    <li class="listItemStyle listItemDefault abtMe" onclick="aboutMeactive()">
+                        About me
+                    </li>
+                    <li class="listItemStyle">
+                        Work
+                    </li>
+                    <li class="listItemStyle">
+                        Philosophy
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-5 homeRightCol">
+                <img src="svg/homepageIMG/homeRightIMG.svg" alt="homeDefault" class="homeDefaultIMG d-none">
+                <div class="aboutMe rightColContent">
+                    A self taugth developer, and still in the process of developing. Fell in love with web/software
+                    developement for the fun of creating and exploring new orgins.
+                </div>
+                <div class="work d-none">
+                    Inter:
+                    Trio Smartechs, Chennai - Apirl 2019 to October 2019
+                    Junior-developer
+                    Feathers Studios, Chennai - November 2019 to Present
+                </div>
+            </div>
             <!-- <div class="row h-50">
                 <div class="col-6 topLeftcol" ></div>
                 <div class="col-6 topRightcol"></div>

@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: #000000;
 }
 .welcomeText{
     position: absolute;
@@ -35,7 +36,7 @@
     }
 }
 .navbar{
-    background-color: #b404ff;
+    background-color: transparent;
     box-shadow: 0 2px 100px indigo;
 }
 .icon:hover{
@@ -72,14 +73,14 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #b404ff;
+    background-color: #d34328;
     clip-path: polygon(50% 0%, 100% 0, 100% 100%);
 }
 .leftTri{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #b404ff;
+    background-color: #d34328;
     clip-path: polygon(50% 0%, 0 100%, 0 0);
 }
 .lrTriAnimation{
@@ -114,18 +115,36 @@
 }
 
 .headerTxt{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 30px;
-    color: #b404ff;
+    background-color: #d34328;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    z-index:100;
+    text-shadow: 0 2px 50px #b404ff;
+    font-size: 30px;
+    color: #ffffff;
+    z-index: 100;
+}
+.headerOutLine{
+    padding:10px 5px;
+    margin: 0 3rem;
+    box-shadow: -5px 5px 40px rgba(255,255,255,0.2), 5px -5px 40px rgba(255,255,255,0.2);
+    border-radius: 20px;
+    border: 10px solid #ffd904;
+}
+.headerImg{
+    width:200px;
+    height:auto;
+    display: block;
+    margin: 0 auto;
 }
 .name{
-    font-size:40px;
+    display: inline-block;
+    font-size: 40px;
     font-weight: 600;
+}
+.homeFont{
+    display: flex;
 }
 
 .topLeftcol{
@@ -141,5 +160,60 @@
     background-color: rgba(255, 217, 4, 1);
 }
 .homeScreen{
-    height: 100vh;
+    height: calc( 100vh - 70px);
+}
+.btnGroup{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+li{
+    cursor: pointer;
+}
+.listItemStyle{
+    list-style: none;
+    margin: 20px 0;
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+}
+.listItemDefault{
+    background-color: rgba(255, 217, 4, 0.4);
+    color: white;
+
+}
+.listItemStyle:hover{
+    background-color: rgba(255,217,4,1);
+    box-shadow: -2px 2px 10px rgba(255,217,4,1),2px -2px 10px rgba(255,217,5,1);
+    border: 2px solid rgba(180, 4, 255, 1);
+    color: black;
+}
+.listItemActive{
+    
+    background-color: rgba(255,217,4,1);
+    box-shadow: -2px 2px 10px rgba(255,217,4,1),2px -2px 10px rgba(255,217,5,1);
+    border: 2px solid rgba(180, 4, 255, 1);
+    color: black;
+}
+.homeRightCol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homeDefaultIMG{
+    width:90%;
+    padding: 1rem;
+}
+.rightColContent{
+
+    margin-right:3rem;
+    width:90%;
+    padding:20px 30px;
+    border-radius: 5px;
+    border: 10px solid #d34328;
+    line-height: 3rem;
+    font-size: 25px;
+    color:#ffffff;
+}
+.aboutMe{
 }
