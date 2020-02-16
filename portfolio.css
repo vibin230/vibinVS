@@ -1,6 +1,9 @@
+body{
+    font-size: 14px;
+}
 .basePage{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     background-color: #000000;
 }
@@ -66,21 +69,21 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #0176be;
+    background-color: #552583;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .rightTri{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #d34328;
+    background-color: #FDB927;
     clip-path: polygon(50% 0%, 100% 0, 100% 100%);
 }
 .leftTri{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #d34328;
+    background-color: #FDB927;
     clip-path: polygon(50% 0%, 0 100%, 0 0);
 }
 .lrTriAnimation{
@@ -115,7 +118,7 @@
 }
 
 .headerTxt{
-    background-color: #0176be;
+    background-color: #552583;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,6 +157,9 @@
     text-align: center;
     justify-content: center;
 }
+.ulStyle{
+    padding:0;
+}
 li{
     cursor: pointer;
 }
@@ -165,20 +171,20 @@ li{
     border: 2px solid transparent;
 }
 .listItemDefault{
-    background-color: #d343284d;
+    background-color: #fdb92767;
     color: #ffffff;
 
 }
 .listItemStyle:hover{
-    background-color: #d34328;
-    box-shadow: -2px 2px 10px #d34328,2px -2px 10px #d34328;
+    background-color: #FDB927;
+    box-shadow: -2px 2px 10px #FDB927,2px -2px 10px #FDB927;
     border: 2px solid #b404ff;
     color: #ffffff;
 }
 .listItemActive{
     
-    background-color: #0176be;
-    box-shadow: -2px 2px 10px #d34328,2px -2px 10px #d34328;
+    background-color:#552583;
+    box-shadow: -2px 2px 10px #FDB927,2px -2px 10px #FDB927;
     border: 2px solid #b404ff;
     color: white;
 }
@@ -194,13 +200,12 @@ li{
 .rightColContent {display:none;}
 .rightColContent.active {
     display: unset;
-    margin-right:3rem;
     width:90%;
     padding:20px 30px;
     border-radius: 5px;
-    border: 10px solid #d34328;
+    border: 10px solid #FDB927;
     line-height: 3rem;
-    font-size: 25px;
+    font-size: 14px;
     color:#ffffff;
 }
 .workTitle{
@@ -208,4 +213,5 @@ li{
     border-radius: 10px;
     padding: 0 10px;
     background: linear-gradient(45deg, #d34328, #0176be);
+    color:#fdb92767;
 }
