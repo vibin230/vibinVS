@@ -16,7 +16,7 @@
     border: 5px solid #ffffff;
     color: white;
     padding: 10px 20px;
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 10px #00000033;
     box-shadow: 0 2px 10px #b404ff;
 }
 .wtAnimation{
@@ -66,7 +66,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #ffd904;
+    background-color: #0176be;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .rightTri{
@@ -128,9 +128,8 @@
 .headerOutLine{
     padding:10px 5px;
     margin: 0 3rem;
-    box-shadow: -2px 2px 100px rgba(0,0,0,0.1), 10px -12px 100px rgba(0,0,0,0.1);
+    box-shadow: -2px 2px 100px #0000001a, 10px -12px 100px #0000001a;
     border-radius: 20px;
-    /* border: 10px solid #ffd904; */
 }
 .headerImg{
     width:200px;
@@ -145,19 +144,6 @@
 }
 .homeFont{
     display: flex;
-}
-
-.topLeftcol{
-    background-color: rgba(255, 217, 4, 0.2);
-}
-.topRightcol{
-    background-color: rgba(180, 4, 255, 0.2);
-}
-.bottomLeftcol{
-    background-color: rgba(180, 4, 255, 1);
-}
-.bottomRightcol{
-    background-color: rgba(255, 217, 4, 1);
 }
 .homeScreen{
     min-height: calc( 100vh - 65px);
@@ -178,21 +164,21 @@ li{
     border: 2px solid transparent;
 }
 .listItemDefault{
-    background-color: rgba(255, 217, 4, 0.4);
-    color: white;
+    background-color: #d343284d;
+    color: #ffffff;
 
 }
 .listItemStyle:hover{
-    background-color: rgba(255,217,4,1);
-    box-shadow: -2px 2px 10px rgba(255,217,4,1),2px -2px 10px rgba(255,217,5,1);
-    border: 2px solid rgba(180, 4, 255, 1);
-    color: black;
+    background-color: #d34328;
+    box-shadow: -2px 2px 10px #d34328,2px -2px 10px #d34328;
+    border: 2px solid #b404ff;
+    color: #ffffff;
 }
 .listItemActive{
     
     background-color: #0176be;
-    box-shadow: -2px 2px 10px rgba(255,217,4,1),2px -2px 10px rgba(255,217,5,1);
-    border: 2px solid rgba(180, 4, 255, 1);
+    box-shadow: -2px 2px 10px #d34328,2px -2px 10px #d34328;
+    border: 2px solid #b404ff;
     color: white;
 }
 .homeRightCol{
@@ -206,7 +192,7 @@ li{
 }
 .rightColContent {display:none;}
 .rightColContent.active {
-    display: flex;
+    display: unset;
     margin-right:3rem;
     width:90%;
     padding:20px 30px;
@@ -216,8 +202,9 @@ li{
     font-size: 25px;
     color:#ffffff;
 }
-
-  
-  /* .page#p3, .tab.active#t3 {
-    background-color:#e28968;
-  } */
+.workTitle{
+    display: block;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: linear-gradient(45deg, #d34328, #0176be);
+}
