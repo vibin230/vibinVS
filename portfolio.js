@@ -3,11 +3,12 @@ const welcomeText = document.querySelector(".welcomeText");
 const leftTri = document.querySelector(".leftTri");
 const rightTri = document.querySelector(".rightTri");
 const midTri = document.querySelector(".midTri");
-const navbar = document.querySelector("navbar");
-const headerTxt = document.querySelector(".headerTxt");
+const navbar = document.getElementById("nav");
+const homeScreen = document.querySelector(".homeScreen");
 const homeButtons = document.querySelector(".btnGroup");
-const activeLinks = document.querySelector(".homeDefaultIMG");
-const pages = document.getElementsByClassName("rightColContent");
+const activeLeftLinks = document.querySelector(".homeDefaultIMG");
+const pagesRightTop = document.getElementsByClassName("topColContent");
+const pagesRightBottom = document.getElementsByClassName("bottomColContent");
 const tabs = document.getElementsByClassName("listItemStyle");
 
 const onloadAnimation = () => {
@@ -20,8 +21,9 @@ const onloadAnimation = () => {
                 midTri.classList.add("mTriAnimation");
                 setTimeout(() => {
                     loadingScreen.classList.add("d-none");
-                    headerTxt.classList.remove("d-none");
-                    homeButtons.classList.remove("d-none");
+                    homeScreen.classList.remove("d-none");
+                    navbar.classList.remove("d-none");
+                    // homeButtons.classList.remove("d-none");
                 }, 500)
             }, 1000)
         }, 1000)
@@ -40,23 +42,27 @@ for(j = 0; j < tabs.length; j++) {
 function clickTab (e) {
 
   var tabID = e.currentTarget.id
-  var pageID = tabID.replace("t","c")
+  var pageRightID = tabID.replace("t","c")
+  var pageLeftID = tabID.replace("t","cl")
 
-  for (i = 0; i < pages.length; i++) {
+  for (i = 0; ((i < pagesRightBottom.length) && (i < pagesRightTop.length)); i++) {
     // deactivate all tabs
     tabs[i].classList.remove("listItemActive")
-    activeLinks.classList.remove("active")
-    activeLinks.classList.add("d-none")
+    activeLeftLinks.classList.remove("active")
+    activeLeftLinks.classList.add("d-none")
     // hide all pages
-    pages[i].classList.remove("active")
+    pagesRightBottom[i].classList.remove("active")
+    pagesRightTop[i].classList.remove("active")
   }
 
   // activate current tab
   e.currentTarget.classList.add("listItemActive")
 
   // show current page
-  var currentPage = document.querySelector('#'+pageID)
-  currentPage.classList.add('active')
+  var currentRightPage = document.querySelector('#'+pageRightID)
+  var currentLeftPage = document.querySelector("#"+pageLeftID)
+  currentRightPage.classList.add('active')
+  currentLeftPage.classList.add("active")
 
 }
 

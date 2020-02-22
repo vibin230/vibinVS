@@ -1,5 +1,7 @@
+
 body{
     font-size: 14px;
+    --col-bg-color:  #a6192d ;
 }
 .basePage{
     width: 100vw;
@@ -69,7 +71,7 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #552583;
+    background-color:var(--col-bg-color);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .rightTri{
@@ -118,7 +120,7 @@ body{
 }
 
 .headerTxt{
-    background-color: #552583;
+    background-color: var(--col-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,35 +185,109 @@ li{
 }
 .listItemActive{
     
-    background-color:#552583;
+    background-color:var(--col-bg-color);
     box-shadow: -2px 2px 10px #FDB927,2px -2px 10px #FDB927;
     border: 2px solid #b404ff;
     color: white;
 }
-.homeRightCol{
-    display: flex;
+.rightCol{
+    display:flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+.leftStyle{
+    display: flex;
 }
 .homeDefaultIMG{
     width:90%;
     padding: 1rem;
 }
-.rightColContent {display:none;}
-.rightColContent.active {
-    display: unset;
+.rightTopImgAlign{
+    align-items: flex-end;
+}
+.topColContent {display:none;}
+.topColContent.active {
+    display: flex;
+    flex-direction: column;
     width:90%;
+    height:50%;
+    transform: translate(0,12.5%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
     padding:20px 30px;
+    background-color: var(--col-bg-color);
     border-radius: 5px;
-    border: 10px solid #FDB927;
-    line-height: 3rem;
+    line-height: 2rem;
     font-size: 14px;
     color:#ffffff;
+    animation-name: topSpin;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out;
+}
+.bottomColContent {display:none;}
+.bottomColContent.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width:90%;
+    height:50%;
+    transform: translate(0,-12.5%);
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+    padding:20px 30px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    line-height: 2rem;
+    font-size: 14px;
+    color:#000000;
+    animation-name: bottomSpin;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes topSpin{
+    0%{
+        opacity:0;
+        transform: translate(100%,12.5%);
+    }
+    90%{
+        opacity:1;
+        transform: translate(-5%,12.5%);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0,12.5%0);
+    }
+}
+@keyframes bottomSpin{
+    0%{
+        opacity:0;
+        transform: translate(-100%,-12.5%);
+    }
+    
+    90%{
+        opacity:1;
+        transform: translate(5%,-12.5%);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0,-12.5%);
+    }
 }
 .workTitle{
     display: block;
     border-radius: 10px;
     padding: 0 10px;
     background: linear-gradient(45deg, #d34328, #0176be);
-    color:#fdb92767;
+    color:#ffffff;
+}
+#hobbies{
+    width:inherit;
+}
+.hobbiesTop{
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hobbbiesBot{
+    flex-direction: row !important;
+    align-items: center;
 }

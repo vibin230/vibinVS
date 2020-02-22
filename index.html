@@ -8,6 +8,7 @@
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="portfolio.css" />
+    <link rel="stylesheet" type="text/css" href="icons.css" />
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -21,8 +22,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
     <title>Vibin VS</title>
 </head>
@@ -41,7 +42,7 @@
         <!-- onload screen -->
 
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark d-none" id="nav">
             <a class="navbar-brand mx-auto" href="#">Vibin Senniappan</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +67,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/vibin-senniappan-097802136/">
-                            <img src="svg/social-1_round-linkedin.svg" alt="linkedinICON" srcset="" class="icon">  
+                            <img src="svg/social-1_round-linkedin.svg" alt="linkedinICON" srcset="" class="icon">
                         </a>
                     </li>
                 </ul>
@@ -74,56 +75,114 @@
         </nav>
         <!-- navbar -->
 
-
-        <div class="row homeScreen">
-            <span class="col-12 col-sm-6 col-md-6 col-lg-4 headerTxt d-none">
+        <!-- home left scree -->
+        <div class="row homeScreen d-none">
+            <span class="col-12 col-sm-6 col-md-6 col-lg-4 headerTxt">
                 <div class="headerOutLine">
-                    <img src="svg/homepageIMG/introIMG.svg" alt="headerImg" class="headerImg">
+                    <img src="svg/homepageIMG/homeLeftImg.svg" alt="headerImg" class="headerImg">
                     <span class="homeFont">
                         I'm Vibin, Front-end Developer based in Chennai
                     </span>
                 </div>
             </span>
+
+            <!-- home middle screen -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-3 btnGroup">
                 <ul class="ulStyle">
                     <li id="t1" class="listItemStyle listItemDefault">
                         About me
                     </li>
-                    <li id="t2" class="listItemStyle listItemDefault" >
+                    <li id="t2" class="listItemStyle listItemDefault">
                         Work
                     </li>
                     <li id="t3" class="listItemStyle listItemDefault">
                         Goals
                     </li>
-                    <!-- <li id="t3" class="listItemStyle listItemDefault">
+                    <!-- <li id="t4" class="listItemStyle listItemDefault">
                         Hobbies
                     </li> -->
-                   
                 </ul>
-
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-5 homeRightCol">
+            <div class="col-12 col-sm-6 col-lg-5 leftStyle">
                 <img src="svg/homepageIMG/homeRightIMG.svg" alt="homeDefault" class="homeDefaultIMG active">
-                <div id="c1" class="rightColContent ">
-                    A self taught developer, and still in the process of developing. Fell in love with web/software
-                    developement for the fun of creating and exploring new orgins. I love what I do, so I dont have time limit to work.  
+                <div class="rightCol">
+                    <!-- about me -->
+                    <div id="c1" class="topColContent rightTopImgAlign">
+                        A self taught budding developer. Fell in love with web 
+                        developement for the fun of creating and exploring new orgins. I love what I do, so I dont have
+                        time
+                        limit to work.
+                        <img src="svg/aboutMe/topImg.svg" alt="coding" class="aboutMe">
+                    </div>
+                    <div id="cl1" class="bottomColContent">
+                        <img src="svg/aboutMe/bottomImg.svg" alt="basketball" class="aboutMe">
+                        <h2>Personal Life:</h2>
+                        A big time fan of Lakers and CSK, inspired by the coolness of Dhoni and mentality of Kobe.
+                        Dog person with love towards coffee and dark chocolates.
+                    </div>
                 </div>
-                <div id="c2" class="rightColContent">
-                    <span class="workTitle">Intern:</span>
-                    Trio Smartechs, Chennai : <br> Apirl 2019 to October 2019<br>
+                <div class="rightCol">
+                    <!-- work -->
+                    <div id="c2" class="topColContent">
+                        Professional
+                        <span class="workTitle">Intern:</span>
+                        Trio Smartechs, Chennai : <br> Apirl 2019 to October 2019<br>
 
-                    <span class="workTitle">Junior-developer:</span>
-                    Feathers Studios, Chennai : <br> November 2019 to Present <br>
+                        <span class="workTitle">Junior-developer:</span>
+                        Feathers Studios, Chennai : <br> November 2019 to Present <br>
+                    </div>
+                    <div id="cl2" class="bottomColContent">
+                        <img src="svg/work/bottomImg.svg" alt="workImg" class="works">
+                        This is the first website in have done apart from the projects which I work in my firm.
+                        and still working to make this page more animative, attracitve and perfectly responsive.
+                        I like to work on my leasure time to improve myself so keep tabs on this site for my new works,
+                        I will link them as I finish.
+                    </div>
                 </div>
-                <div id="c3" class="rightColContent">
-                To be a awesome and creative developer in the span of next couple of years. 
-                I have always had an eye for AI developement and Network Security, 
-                would love to work in anyone of them in future if the opportunity is provided. 
-                Oh wait!!! opportunity doesn't come by itself. Lets hustle to the dream and bright future!!! 
+                <div class="rightCol">
+                    <!-- goals -->
+                    <div id="c3" class="topColContent rightTopImgAlign">
+                        To be a creative developer in the span of next few years.
+                        I have always had an eye for AI developement and Network Security,
+                        would love to work in anyone of them in future if the opportunity is provided.
+                        Oh wait!!! opportunity doesn't come by itself. Lets hustle to the dream and bright future!!!
+                        <img src="svg/goals/topImg.svg" src="hackerMind" class="goalsTop">
+                    </div>
+                    <div id="cl3" class="bottomColContent">
+                        <img src="svg/goals/bottomImg.svg" alt="hackerMind" class="goalsBottom">
+                        Apart from the goal of being a developer I would like to be a good human, I would like to give
+                        something back to the society and nature,
+                        in return for making me who I am and inspiring me to become who I want to be.
+                        Interested to work on Ideas which could change the lives of people for better.
+                    </div>
                 </div>
+
+                <!-- hobbies
+                 -->
+                <!-- <div class="rightCol" id="hobbies">
+                    <div id="c4" class="topColContent hobbiesTop"  >
+                        <div class="dota">
+                            <img src="svg/homepageIMG/dota2.svg" alt="dotaImg" id="dotaImg" >
+                        </div>
+                        <div class="csgo">
+                            <img src="svg/homepageIMG/CSGO.svg" alt="csgoImg" id="csgoImg" >
+                        </div>
+                    </div>
+                    <div id="cl4" class="bottomColContent hobbbiesBot">
+                        <div class="nba">
+                            <img src="svg/homepageIMG/nba.svg" alt="nbaImg" id="nbaImg" >
+                        </div>
+                        <div class="chess">
+                            <img src="svg/homepageIMG/chess.svg" alt="chessImg" id="chessImg" >
+                        </div>
+                        <div class="cricket">
+                            <img src="svg/homepageIMG/cricket.svg" alt="cricketImg" id="cricketImg" >
+                        </div>
+                    </div> 
+                </div> -->
             </div>
-           
+
         </div>
 
     </section>
