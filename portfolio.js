@@ -10,6 +10,7 @@ const activeLeftLinks = document.querySelector(".homeDefaultIMG");
 const pagesRightTop = document.getElementsByClassName("topColContent");
 const pagesRightBottom = document.getElementsByClassName("bottomColContent");
 const tabs = document.getElementsByClassName("listItemStyle");
+const footer = document.getElementsByClassName("footer");
 
 const onloadAnimation = () => {
     return (
@@ -23,6 +24,7 @@ const onloadAnimation = () => {
                     loadingScreen.classList.add("d-none");
                     homeScreen.classList.remove("d-none");
                     navbar.classList.remove("d-none");
+                    footer.classList.remove("d-none");
                     // homeButtons.classList.remove("d-none");
                 }, 500)
             }, 1000)

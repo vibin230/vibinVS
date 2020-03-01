@@ -1,60 +1,5 @@
-.dota{
-    box-sizing: border-box;
-    width: fit-content;
-    display: inline-block;
-    height: auto;
-    padding: 30px;
-    border-radius: 50%;
-    background: aliceblue;
-    
-}
-#dotaImg{
-    width:7rem;
-}
-.csgo{
-    box-sizing: border-box;
-    width: fit-content;
-    display: inline-block;
-    height: auto;
-    padding: 30px;
-    border-radius: 50%;
-    background: aliceblue;
-}
-#csgoImg{
-    width:12.5rem;
-}
-.nba{
-    display:inline-block
-}
-#nbaImg{
-    width:10.5rem;
-}
-.chess{
-    box-sizing: border-box;
-    width: fit-content;
-    display: inline-block;
-    height: fit-content;
-    padding: 30px;
-    border-radius: 50%;
-    background: #a6192d;
-}
-#chessImg{
-    width:4.5rem;
-}
-.cricket{
-    box-sizing: border-box;
-    width: fit-content;
-    display: inline-block;
-    height: fit-content;
-    padding: 30px;
-    border-radius: 50%;
-    background: #a6192d;
-}
-#cricketImg{
-    width:7.5rem;
-}
 .aboutMe{
-    width:7rem;
+    max-width:7rem;
 }
 .goalsTop{
     max-width: 10rem;
@@ -63,5 +8,19 @@
     max-width:8rem
 }
 .works{
-    width:10rem;
+    max-width:10rem;
 }
+@media screen and (max-width: 420px) {
+    .aboutMe{
+        display:none;
+    }
+    .goalsTop{
+        display: none;
+    }
+    .goalsBottom{
+       display: none;
+    }
+    .works{
+        display: none;
+    }
+  }
