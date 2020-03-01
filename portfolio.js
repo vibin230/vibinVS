@@ -10,8 +10,9 @@ const activeLeftLinks = document.querySelector(".homeDefaultIMG");
 const pagesRightTop = document.getElementsByClassName("topColContent");
 const pagesRightBottom = document.getElementsByClassName("bottomColContent");
 const tabs = document.getElementsByClassName("listItemStyle");
-const footer = document.getElementsByClassName("footer");
+const footer = document.querySelector(".footer");
 
+console.log(homeScreen.classList);
 const onloadAnimation = () => {
     return (
         setTimeout(() => {
